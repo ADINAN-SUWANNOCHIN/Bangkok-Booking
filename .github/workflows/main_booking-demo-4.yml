@@ -8,24 +8,24 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-name: Set up Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'  # Update to your required Node.js version
 
-name: Install dependencies
+      - name: Install dependencies
         run: |
           npm install
-name: 'booking-system'
+      - name: 'booking-system'
         run: |
           npm run build  # Build the Angular app for production
-name: Zip Build Output
+      - name: Zip Build Output
         run: |
           zip -r test-push.zip dist/test-push
-name: Deploy to Azure Web App
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'angular-test-deploy'  # Your App Service name
