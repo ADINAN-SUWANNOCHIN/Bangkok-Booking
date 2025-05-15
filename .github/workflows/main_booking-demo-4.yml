@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-      - name: 'booking-system'
+      - name: booking-system
         run: |
           npm run build  # Build the Angular app for production
       - name: Zip Build Output
