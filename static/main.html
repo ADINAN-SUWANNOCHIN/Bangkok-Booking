@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Where | Main</title>
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <!-- swal2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body class="bg">
+<!-- Navbar -->
+<nav class="sticky-top p-3 mb-3 border-bottom border-body" style="background-color: #ffffff;">
+  <div class="container">
+    <!-- Logo -->
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="main.html" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+        <img class="shadow d-inline-block align-text-top me-3 rounded-circle" src="images/Every logo2.png" width="50" height="50">
+      </a>
+      <!-- menu -->
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 nav-underline">
+        <li><a href="main.html" class="nav-link px-2 link-body-emphasis active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="hotel.html" class="nav-link px-2 link-body-emphasis"><i class="fa-solid fa-hotel"></i> ที่พัก</a></li>
+        <a class="nav-link px-2 link-body-emphasis dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa-regular fa-paper-plane"></i> บริการเดินทางขนส่ง</a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="flight.html"><i class="fa-solid fa-plane"></i> ตั๋วเครื่องบิน</a></li>
+            <li><a class="dropdown-item" href="bus.html"><i class="fa-solid fa-bus"></i> รถบัส</a></li>
+            <li><a class="dropdown-item" href="train.html"><i class="fa-solid fa-train-subway"></i> รถไฟ</a></li>
+            <li><a class="dropdown-item" href="Ferrie.html"><i class="fa-solid fa-ferry"></i> เรือเฟอร์รี</a></li>
+            <li><a class="dropdown-item" href="airport.html"><i class="fa-solid fa-taxi"></i> บริการรับส่งสนามบิน</a></li>
+            <li><a class="dropdown-item" href="carrental.html"><i class="fa-solid fa-car"></i> บริการเช่ารถ</a></li>
+            </ul>
+        <li><a href="activity.html" class="nav-link px-2 link-body-emphasis"><i class="fa-solid fa-map-location-dot"></i> กิจกรรม</a></li>
+      </ul>
+      
+      <!-- Currency -->
+      <div class="dropdown text-end">
+        <a href="#" class="col-2 d-block link-body-emphasis text-decoration-none dropdown-toggle me-4" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/Thailand-Flag1.png" alt="mdo" width="32" height="32" class="rounded-circle shadow"> THB
+        </a>
+        <ul class="dropdown-menu text-small">
+          <li><a class="dropdown-item" href="#">Not Today</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> 
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <img src="images/Every logo1.png" class="rounded-circle" width="100%">
+    <h3 class="fw-normal text-muted mb-3">เปิดประสบการณ์การเดินทางสุดสนุกไปกับ "Every Where"</h3>
+    <div class="d-flex gap-3 justify-content-center lead fw-normal">
+      <a class="icon-link" href="memberpro.html">
+        Member Profile
+      </a>
+    </div>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  <!-- Slide -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <!--Pic1-->
+    <div class="carousel-inner slidecurve">
+      <div class="carousel-item active">
+        <img src="images/slide1.png" class="d-block w-100" alt="...">
+      </div>
+      <!--Pic2-->
+      <div class="carousel-item">
+        <img src="images/slide2.png" class="d-block w-100" alt="...">
+      </div>
+      <!--Pic3-->
+      <div class="carousel-item">
+        <img src="images/slide3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+
+<!-- ที่พักแนะนำกรุงเทพ -->
+<div class="container px-4 py-5" id="hotelRecBangkok">
+  <h2 class="pb-2 border-bottom"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> ที่พักแนะนำในประเทศ</h2>
+  <!-- nav -->
+  <ul class="nav nav-pills mb-2">
+    <li class="nav-item">
+      <button type="button" class="btn btn-primary me-2 normalpop" id="bangkokRecom1">กรุงเทพ</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="btn btn-outline-primary me-2 normalpop" id="upcountryRecom1">ต่างจังหวัด</button>
+    </li>
+  </ul>
+  
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-1" id="cardBangkok">
+    <!-- card1 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#bangkokModal1">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">Suvarnabhumi Airport</span>
+        <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10010195-8ca7a1c1fdccbd58ee8c2d5d350a0cc6.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>Summit Windmill Golf Suite Hotel </b></h5>
+          <p class="card-text">4.3 ⭐⭐⭐⭐(503)</p>
+          <p class="card-text"><b>THB 2,500</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- bangkokModal1 -->
+    <div class="modal fade" id="bangkokModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Summit Windmill Golf Suite Hotel</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModalBangkok1" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModalBangkok1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselModalBangkok1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalBangkok1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10010195-72a76111b70f2ce3ec6d62c77480275a.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10010195-d7694e7f496ca1e9feea91f35f03b452.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10010195-f8d8db7df85e4f73b620165f3507156e.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalBangkok1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModalBangkok1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>Summit Windmill Golf Suite Hotel @Suvarnabhumi</h4>
+                    <span class="badge rounded-pill text-bg-primary">โรงแรม</span><p class="card-text">4.3 ⭐⭐⭐⭐(503)</p>
+                    <small class="text-body-secondary">Summit Windmill Golf Suite Hotel @Suvarnabhumi</small>
+                    <p><i class="fa-solid fa-location-dot"></i> 788 หมู่14 ถนน บางนา-ตราด แขวง บางพลีใหญ่ , สนามบินสุวรรณภูมิ, ลาดกระบัง, กรุงเทพฯ, ประเทศไทย, 10540 <a href="https://maps.app.goo.gl/yWVWSKBPSQS6w48p7" target = "blank">แผนที่</a></p><br><br><br>
+                    <h5>ราคา/ห้องพัก/คืน เริ่มต้นที่</h5>
+                    <h4 style="color: #3bb1ff;">THB 2,500</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a href="detailhotel1.html" class="btn btn-secondary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 20px;">ข้อมูลเพิ่มเติม</a>
+            <a href="hotelform.html" class="btn btn-primary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 100px; --bs-btn-font-size: 20px;">จองเลย</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#bangkokModal2">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">Ratchadaphisek</span>
+        <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20003537-aec9372e79acdcc3bc270d529af321cb.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>Sleep Hotel Bangkok</b></h5>
+          <p class="card-text">4.2 ⭐⭐⭐⭐(292)</p>
+          <p class="card-text"><b>THB 1,500</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- bangkokModal2 -->
+    <div class="modal fade" id="bangkokModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Sleep Hotel Bangkok</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModalBangkok2" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModalBangkok2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalBangkok2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalBangkok2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20003537-183b481d6b2e01003de8ffd156e3306e.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20003537-874ab5010bba6e5a7cede3b4ab2d5a5b.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20003537-8dc326bb23429ddeadd0354510d569c3.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalBangkok2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModalBangkok2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>Sleep Hotel Bangkok</h4>
+                    <span class="badge rounded-pill text-bg-primary">โรงแรม</span><p class="card-text">4.2 ⭐⭐⭐⭐(292)</p>
+                    <small class="text-body-secondary">Sleep Hotel Bangkok</small>
+                    <p><i class="fa-solid fa-location-dot"></i> 28/9 ซอย ประชาราชบําเพ็ญ 26 แยก 12 สามเสนนอก ห้วยขวาง, รัชดา, ห้วยขวาง, กรุงเทพฯ, ประเทศไทย, 10310 <a href="https://maps.app.goo.gl/KcZvQZr6yQkUqszq7" target = "blank">แผนที่</a></p><br><br><br>
+                    <h5>ราคา/ห้องพัก/คืน เริ่มต้นที่</h5>
+                    <h4 style="color: #3bb1ff;">THB 1,500</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a href="detailhotel2.html" class="btn btn-secondary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 20px;">ข้อมูลเพิ่มเติม</a>
+            <a href="hotelform.html" class="btn btn-primary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 100px; --bs-btn-font-size: 20px;">จองเลย</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card3 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#bangkokModal3">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">Pratunam</span>
+        <img src="https://www.siamstarhotels.com/images/1574.jpg0" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>Siam Star Hotel</b></h5>
+          <p class="card-text">3.7 ⭐⭐⭐(394)</p>
+          <p class="card-text"><b>THB 1,000</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- bangkokModal3 -->
+    <div class="modal fade" id="bangkokModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Siam Star Hotel</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModalBangkok3" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModalBangkok3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselModalBangkok3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalBangkok3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10021578-b2013bf25e85cd9ca11c3af94212e9dc.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10021578-2edc1405003e6e4465c9d3dd36539ee0.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10021578-bf52052a103a3ef3947ad87ef1787b07.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalBangkok3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModalBangkok3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>Siam Star Hotel</h4>
+                    <span class="badge rounded-pill text-bg-primary">โรงแรม</span><p class="card-text">3.7 ⭐⭐⭐(394)</p>
+                    <small class="text-body-secondary">Siam Star Hotel</small>
+                    <p><i class="fa-solid fa-location-dot"></i> 178/7 ราชปรารภ5 ถนนราชปรารภ ราชเทวี , ประตูน้ำ, ประตูน้ำ, ราชเทวี, กรุงเทพฯ, ประเทศไทย, 10400
+                      <a href="https://maps.app.goo.gl/8SzJuj6Ru8qBAR62A" target = "blank">แผนที่</a></p><br><br><br>
+                    <h5>ราคา/ห้องพัก/คืน เริ่มต้นที่</h5>
+                    <h4 style="color: #3bb1ff;">THB 1,000</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a href="detailhotel3.html" class="btn btn-secondary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 20px;">ข้อมูลเพิ่มเติม</a>
+            <a href="hotelform.html" class="btn btn-primary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 100px; --bs-btn-font-size: 20px;">จองเลย</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- ที่พักแนะนำต่างจังหวัด -->
+<div class="container px-4 py-5" id="hotelRecUp">
+  <h2 class="pb-2 border-bottom"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> ที่พักแนะนำในประเทศ</h2>
+  <!-- nav -->
+  <ul class="nav nav-pills mb-2">
+    <li class="nav-item">
+      <button type="button" class="btn btn-outline-primary me-2 normalpop" id="bangkokRecom2">กรุงเทพ</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="btn btn-primary me-2 normalpop" id="upcountryRecom2">ต่างจังหวัด</button>
+    </li>
+  </ul>
+  
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-1" id="cardUpc">
+    <!-- card1 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#upCountryModal1">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">Pattaya</span>
+        <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20063296-318cc6b3970d63e796f6c25e20fc1c8f.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>Pattaya Paradise Beach Resort </b></h5>
+          <p class="card-text">4.4 ⭐⭐⭐⭐(157)</p>
+          <p class="card-text"><b>THB 2,500</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- UpcountryModal1 -->
+    <div class="modal fade" id="upCountryModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Pattaya Paradise Beach Resort</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModalUpcountry1" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModalUpcountry1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalUpcountry1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalUpcountry1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20063296-013e553372d96fe8ed8d459a8e03189a.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/26000000/25140000/25136100/25136049/9a19838d_z.jpg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/26000000/25140000/25136100/25136049/2465b107_z.jpg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalUpcountry1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModalUpcountry1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>Pattaya Paradise Beach Resort</h4>
+                    <span class="badge rounded-pill text-bg-primary">รีสอร์ต</span><p class="card-text">4.4 ⭐⭐⭐⭐(157)</p>
+                    <small class="text-body-secondary">Pattaya Paradise Beach Resort</small>
+                    <p><i class="fa-solid fa-location-dot"></i> 235  ถ.นาจอมเทียน อ.สัตหีบ, นาจอมเทียน, พัทยา, ชลบุรี, ประเทศไทย, 20250
+                      <a href="https://maps.app.goo.gl/LGg87uDScmqZghrr7" target = "blank">แผนที่</a></p><br><br><br>
+                    <h5>ราคา/ห้องพัก/คืน เริ่มต้นที่</h5>
+                    <h4 style="color: #3bb1ff;">THB 2,500</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a href="detailhotel4.html" class="btn btn-secondary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 20px;">ข้อมูลเพิ่มเติม</a>
+            <a href="hotelform.html" class="btn btn-primary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 100px; --bs-btn-font-size: 20px;">จองเลย</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#upCountryModal2">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">Phuket</span>
+        <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024516-884be080ca1de48f39cd8352a482c26b.png?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>The Beachfront Hotel Phuket </b></h5>
+          <p class="card-text">4.2 ⭐⭐⭐⭐(332)</p>
+          <p class="card-text"><b>THB 2,000</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- UpcountryModal2 -->
+    <div class="modal fade" id="upCountryModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">The Beachfront Hotel Phuket</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModalUpcountry2" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModalUpcountry2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalUpcountry2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalUpcountry2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024516-74536d1c1d634bb90fa7a31d553b36e8.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024516-af080fbee45e8977fd4a2836ed8db3a0.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024516-f8ef8cfa7a6a8438af53ad8dc43f91e7.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalUpcountry2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModalUpcountry2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>The Beachfront Hotel Phuket</h4>
+                    <span class="badge rounded-pill text-bg-primary">โรงแรม</span><p class="card-text">4.2 ⭐⭐⭐⭐(332)</p>
+                    <small class="text-body-secondary">The Beachfront Hotel Phuket</small>
+                    <p><i class="fa-solid fa-location-dot"></i> 25/46 หมู่ 5 ถนนวิเศษ หาดราไวย์, ราไวย์, อำเภอเมืองภูเก็ต, ภูเก็ต, ประเทศไทย, 83130 <a href="https://maps.app.goo.gl/7QkYKvpJ1YbbSvSu6" target = "blank">แผนที่</a></p><br><br><br>
+                    <h5>ราคา/ห้องพัก/คืน เริ่มต้นที่</h5>
+                    <h4 style="color: #3bb1ff;">THB 2,000</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a href="detailhotel5.html" class="btn btn-secondary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 20px;">ข้อมูลเพิ่มเติม</a>
+            <a href="hotelform.html" class="btn btn-primary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 100px; --bs-btn-font-size: 20px;">จองเลย</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card3 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#upCountryModal3">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">Korat </span>
+        <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20043981-de744c7bfb9f91587340dbb5e2b22a99.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>Centre Point Hotel Terminal21 Korat</b></h5>
+          <p class="card-text">4.8 ⭐⭐⭐⭐(1058)</p>
+          <p class="card-text"><b>THB 1,500</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- UpcountryModal3 -->
+    <div class="modal fade" id="upCountryModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">เซนเตอร์พอยต์โฮเทล เทอมินอล 21 โคราช </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModalUpcountry3" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModalUpcountry3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalUpcountry3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModalUpcountry3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20043981-3097520bd28a73d66f6230b5ed80cf69.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20043981-c634cf3ccc4cfc7d522f9d502745eae7.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20043981-27caf3b64e781ac979b51eed2dcd9879.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalUpcountry3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModalUpcountry3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>Centre Point Hotel Terminal21 Korat </h4>
+                    <span class="badge rounded-pill text-bg-primary">โรงแรม</span><p class="card-text">4.8 ⭐⭐⭐⭐(1058)</p>
+                    <small class="text-body-secondary">Centre Point Hotel Terminal21 Korat </small>
+                    <p><i class="fa-solid fa-location-dot"></i> 99 ถ.มิตรภาพ ต.ในเมือง, ในเมือง, อำเภอเมืองนครราชสีมา, นครราชสีมา, ประเทศไทย, 30000 <a href="https://maps.app.goo.gl/4HMi1PmMLbgKhGtcA" target = "blank">แผนที่</a></p><br><br><br>
+                    <h5>ราคา/ห้องพัก/คืน เริ่มต้นที่</h5>
+                    <h4 style="color: #3bb1ff;">THB 1,500</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <a href="detailhotel6.html" class="btn btn-secondary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 75px; --bs-btn-font-size: 20px;">ข้อมูลเพิ่มเติม</a>
+            <a href="hotelform.html" class="btn btn-primary" style="--bs-btn-padding-y: 5px; --bs-btn-padding-x: 100px; --bs-btn-font-size: 20px;">จองเลย</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="container px-4 py-5" id="activityRec">
+  <h2 class="pb-2 border-bottom"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> 3 ที่เที่ยว / กิจกรรมแนะนำในประเทศ</h2>
+
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-1" id="card">
+    <!-- card1 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#Modal1">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">ICONSIAM</span>
+        <img src="https://image.kkday.com/v2/image/get/w_1920,h_1080,c_fit,q_55,wm_auto/s1.kkday.com/product_102447/20230608061400_qY859/jpg?s=800x" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>Meridian Dinner Cruise on Chao Phraya River - ICONSIAM PIER | Bangkok </b></h5>
+          <p class="card-text"><b>ราคาโดยประมาณ 500-600 THB</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal1 -->
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Meridian Dinner Cruise on Chao Phraya River - ICONSIAM PIER | Bangkok</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModal1" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModal1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselModal1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModal1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://image.kkday.com/v2/image/get/w_1920,h_1080,c_fit,q_55,wm_auto/s1.kkday.com/product_102447/20230608061409_RAOSb/jpg?s=800x" class="d-block w-100 modalslideimg" alt="..." width="100%">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://image.kkday.com/v2/image/get/w_1920,h_1080,c_fit,q_55,wm_auto/s1.kkday.com/product_102447/20230608061401_6FSJo/jpg?s=800x" class="d-block w-100 modalslideimg" alt="..." width="100%">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://image.kkday.com/v2/image/get/w_1920,h_1080,c_fit,q_55,wm_auto/s1.kkday.com/product_102447/20230608061356_ggY0R/jpg?s=800x" class="d-block w-100 modalslideimg" alt="..." width="100%">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModal1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>Meridian Dinner Cruise on Chao Phraya River - ICONSIAM PIER | Bangkok</h4>
+                    <span class="badge rounded-pill text-bg-primary">Dinner</span><br>
+                    <small class="text-body-secondary">Meridian Dinner Cruise on Chao Phraya River - ICONSIAM PIER | Bangkok</small>
+                    <p><i class="fa-solid fa-location-dot"></i> 299 ซอยเจริญนคร 5, ถ. เจริญนคร แขวงคลองต้นไทร เขตคลองสาน กรุงเทพมหานคร 10600 <a href="https://maps.app.goo.gl/RToxbAyPTpYQepEb6" target = "blank">แผนที่</a></p><br><br><br><br>
+                    <h5>ราคาโดยประมาณ / 2 ชั่วโมง</h5>
+                    <h4 style="color: #3bb1ff;">500-600 THB</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#Modal2">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">MAHANAKHON Tower</span>
+        <img src="https://r-xx.bstatic.com/xdata/images/xphoto/800x450/153545438.jpg?k=6bef85242f50cf2176a00fabfc00f66c9e312d34dd3c22dfda87fa0efc3c48e1&o=&s=800x" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>จุดชมวิวมหานคร สกายวอล์คในกรุงเทพฯ </b></h5>
+          <p class="card-text"><b>900 THB</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal2 -->
+    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">จุดชมวิวมหานคร สกายวอล์คในกรุงเทพฯ </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModal2" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModal2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModal2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModal2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://q-xx.bstatic.com/xdata/images/xphoto/800x450/153545303.jpg?k=805206b1fb85ca327cbfb36834fdf690d7f21bf6807b82f0a33815c0e5b8333d&o=&s=800x" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://r-xx.bstatic.com/xdata/images/xphoto/800x450/153545498.jpg?k=b9f6bba7c51d29fe11c44210d4064e1a6fa8077f2a1c149ffb0783b4e4905868&o=&s=800x" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://q-xx.bstatic.com/xdata/images/xphoto/800x450/153545372.jpg?k=625d02d72b8b7ba799ea4a637428a33f1100221ac40dc098a58f9ed197b2ae59&o=&s=800x" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModal2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>จุดชมวิวมหานคร สกายวอล์คในกรุงเทพฯ </h4>
+                    <span class="badge rounded-pill text-bg-primary">ชมวิว</span><br>
+                    <small class="text-body-secondary">จุดชมวิวมหานคร สกายวอล์คในกรุงเทพฯ </small>
+                    <p><i class="fa-solid fa-location-dot"></i> แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500 <a href="https://maps.app.goo.gl/JnHwdwprYtoUdz6H9" target = "blank">แผนที่</a></p><br><br><br><br><br><br><br><br><br>
+                    <h5>ราคา</h5>
+                    <h4 style="color: #3bb1ff;">900 THB</h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- card3 -->
+    <div class="col" data-bs-toggle="modal" data-bs-target="#Modal3">
+      <div class="card shadow-sm">
+        <span class="badge text-bg-primary" style="font-size: 15px;">Siam Paragon</span>
+        <img src="https://cms.dmpcdn.com/travel/2021/10/14/53962cd0-2ce0-11ec-be9d-838428bcfc5b_original.jpg" class="card-img-top cardimg" alt="...">
+        <div class="card-body">
+          <h5><b>SEA LIFE Bangkok</b></h5>
+          <p class="card-text"><b>1,200 THB</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal3 -->
+    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">SEA LIFE Bangkok</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- slide -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-xl-6">
+                      <div id="carouselModal3" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselModal3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselModal3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselModal3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <!--Pic1-->
+                          <div class="carousel-inner slidecurve">
+                            <div class="carousel-item active">
+                              <img src="https://media.timeout.com/images/103810416/750/422/image.jpg" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic2-->
+                            <div class="carousel-item">
+                              <img src="https://www.thesustain.space/wp-content/uploads/2022/07/%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81-Sea-Life-Bangkok-Ocean-World.webp" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                            <!--Pic3-->
+                            <div class="carousel-item">
+                              <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/67/2017/08/04113715/Sea-Life-Bangkok.jpg" class="d-block w-100 modalslideimg" alt="...">
+                            </div>
+                          </div>
+          
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselModal3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- info -->
+                  <div class="col-12 col-xl-6">
+                    <h4>SEA LIFE Bangkok</h4>
+                    <span class="badge rounded-pill text-bg-primary">พิพิธภัณฑ์สัตว์น้ำ</span><br>
+                    <small class="text-body-secondary">SEA LIFE Bangkok</small>
+                    <p><i class="fa-solid fa-location-dot"></i> ชั้น บี1-บี2 สยามพารากอน 991 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330
+                      <a href="https://maps.app.goo.gl/aRtM7LogLwtJqvEG7" target = "blank">แผนที่</a></p><br><br><br><br><br>
+                    <h5>ราคา</h5>
+                    <h4 style="color: #3bb1ff;">1,200 THB </h4>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<h6 class="border-bottom"></h6>
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="main.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <img src="images/Every logo2.png" class="me-2 rounded-circle shadow" width="30" height="24"></img>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="nav-item"><a href="main.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="memberpro.html" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="memberpro.html" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="memberpro.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="memberpro.html" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+
+  </footer>
+</div>
+
+</body>
+</html>
